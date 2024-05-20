@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contribute Slang</title>
+  <link rel="stylesheet" href="/CSS/form.css">
+  <link rel="stylesheet" href="/CSS/project.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="form-container">
+    <section class="form-section">
+      <div class="float-container">
+        <div class="float-child">
+          <div class="form-info">
+            <h2 class="form-info-title">Search Your Internet Lingo!😃</h2>
+          </div>
+        </div>
+        <div class="float-child">
+          <div class="form-input">
+            <form id="submitForm" class="submit-form">
+              <div class="form-group">
+                <input type="text" id="shortForm" name="shortForm" class="search-input-field" placeholder="idc" required>
+              </div>
+              <div class="btn">
+                <button type="button" onclick="search()" class="search-btn">Search</button>
+              </div>
+              <div id="result" class="search-result"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="messageContainer" class="message-container""></div>
+  </div>
+  <div class="right-content">
+    <h2>Writing on the internet is changing. IYKYK!</h2>
+    <p>Start by entering a slang,</p>
+    <p>and our dictionary will spit out an abbreviation.</p>
+    <h3 class="form-info-submit">want to enter your own <a href="/HTML/form.html">slang? </a>😹</h3>
+  </div>
+  <script src="/JS/project.js"></script>
+</body>
+</html>

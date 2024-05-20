@@ -19,8 +19,8 @@ app.get('/search', async (req, res) => {
 
   try {
     const connection = await pool.getConnection();
-
-    const [rows] = await connection.execute('SELECT Long_form FROM slang WHERE Short_form = ?', [shortForm]);
+    let query = 'SELECT Long_form FROM slang WHERE Short_form = ?';
+    const [rows] = await connection.execute(query, [shortForm]);
 
     connection.release();
 
@@ -40,9 +40,10 @@ app.post('/submit', async (req, res) => {
 
   try {
     const connection = await pool.getConnection();
+    let query = 'INSERT INTO slang (Short_form, Long_form) VALUES (?, ?)';
 
 
-    await connection.execute('INSERT INTO slang (Short_form, Long_form) VALUES (?, ?)', [shortForm, longForm]);
+    await connection.execute(query, [shortForm, longForm]);
 
     connection.release();
 
